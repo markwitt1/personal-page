@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{QeBL:function(e,a,n){"use strict";n.r(a);var t=n("q1tI"),r=n.n(t),o=n("ofer"),c=n("+ego");a.default=function(){return r.a.createElement(c.a,null,r.a.createElement(o.a,{variant:"h4"},"About me"),r.a.createElement(o.a,null,"I am a Software Engineer who is very passionate about modern technologies. I am a very fast and practical learner."))}}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-4e837d0958de610133a8.js.map
