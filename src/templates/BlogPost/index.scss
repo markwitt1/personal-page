@@ -1,0 +1,17 @@
+.blogpost {
+  h1,
+  h2,
+  p,
+  img,
+  code,
+  ol,
+  ul {
+    max-width: calc(100% - 48px);
+  }
+
+  code {
+    display: block;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}

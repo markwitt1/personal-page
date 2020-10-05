@@ -13,8 +13,9 @@ import {
 import PersonIcon from "@material-ui/icons/Person";
 import SchoolIcon from "@material-ui/icons/School";
 import WorkIcon from "@material-ui/icons/Work";
-import ChatIcon from '@material-ui/icons/Chat';
-import Link, { GatsbyLinkProps } from "gatsby-link";
+import ChatIcon from "@material-ui/icons/Chat";
+import { Link as MuiLink } from "@material-ui/core";
+import Link from "gatsby-link";
 
 interface Props {
   drawerOpen: boolean;
@@ -66,7 +67,7 @@ const MyDrawer = ({ drawerOpen, setDrawerOpen }: Props) => {
           to="/cv"
           onClick={closeDrawer}
         />
-               
+
         <ListItemLink
           icon={<ChatIcon />}
           primary="Blog"
@@ -105,13 +106,20 @@ interface ListItemLinkProps {
 }
 
 function ListItemLink({ icon, primary, to, onClick }: ListItemLinkProps) {
+  const useStyles = makeStyles((theme) => ({
+    link: {
+      textDecoration: "none",
+      color: theme.palette.text.primary,
+    },
+  }));
+  const s = useStyles();
   return (
-    <Link to={to} style={{ textDecoration: "none", color: "black" }}>
+    <MuiLink className={s.link} to={to} component={Link}>
       <ListItem button onClick={onClick}>
         {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
         <ListItemText primary={primary} />
       </ListItem>
-    </Link>
+    </MuiLink>
   );
 }
 

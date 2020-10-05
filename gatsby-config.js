@@ -18,9 +18,6 @@ module.exports = {
         start_url: `/`,
         background_color: `white`,
         theme_color: `#3f51b5`,
-        //display: `minimal-ui`,
-        // edit below
-        icon: `content/assets/favicon.png`,
       },
     },
     `gatsby-plugin-styled-components`,
@@ -30,6 +27,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-material-ui`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

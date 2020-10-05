@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   AppBar,
   Toolbar,
   IconButton,
   Typography,
   makeStyles,
+  useTheme,
 } from "@material-ui/core";
 
 import MenuIcon from "@material-ui/icons/Menu";
-import { useLocation } from "react-router-dom";
+
+import DarkModeButton from "./DarkModeButton";
 interface Props {
   setDrawerOpen: (value: boolean) => void;
 }
@@ -31,26 +33,19 @@ const useStyles = makeStyles((theme) => ({
       zIndex: 1400,
     },
   },
+  darkToggle: {
+    float: "right",
+  },
+  navText: {
+    flexGrow: 1,
+  },
 }));
 
 const NavBar = ({ setDrawerOpen }: Props) => {
   //const location = useLocation().pathname;
   const classes = useStyles();
 
-  const title = (): string => {
-    /*     switch (location) {
-      case "/":
-        return "Mark Witt";
-      case "/projects":
-        return "Projects";
-      case "/cv":
-        return "CV";
-      default:
-        return "Mark Witt";
-    } */
-    return "Mark Witt";
-  };
-
+  const title = "Mark Witt";
   return (
     <AppBar position="fixed" className={classes.appBar}>
       <Toolbar>
@@ -63,7 +58,10 @@ const NavBar = ({ setDrawerOpen }: Props) => {
         >
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6">{title()}</Typography>
+        <Typography className={classes.navText} variant="h6">
+          {title}
+        </Typography>
+        <DarkModeButton />
       </Toolbar>
     </AppBar>
   );

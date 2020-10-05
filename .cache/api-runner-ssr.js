@@ -1,6 +1,6 @@
 var plugins = [{
       plugin: require('/home/yolo/Desktop/personal-page/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"Mark Witt","short_name":"Mark","start_url":"/","background_color":"white","theme_color":"#3f51b5","icon":"content/assets/favicon.png","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":"a0e4867387c0566b12edb2fa74f9c423"},
+      options: {"plugins":[],"name":"Mark Witt","short_name":"Mark","start_url":"/","background_color":"white","theme_color":"#3f51b5","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":null},
     },{
       plugin: require('/home/yolo/Desktop/personal-page/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},

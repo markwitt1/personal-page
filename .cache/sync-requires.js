@@ -11,6 +11,6 @@ exports.components = {
   "component---src-pages-cv-tsx": hot(preferDefault(require("/home/yolo/Desktop/personal-page/src/pages/cv.tsx"))),
   "component---src-pages-index-tsx": hot(preferDefault(require("/home/yolo/Desktop/personal-page/src/pages/index.tsx"))),
   "component---src-pages-projects-tsx": hot(preferDefault(require("/home/yolo/Desktop/personal-page/src/pages/projects.tsx"))),
-  "component---src-templates-blog-post-tsx": hot(preferDefault(require("/home/yolo/Desktop/personal-page/src/templates/blog-post.tsx")))
+  "component---src-templates-blog-post-index-tsx": hot(preferDefault(require("/home/yolo/Desktop/personal-page/src/templates/BlogPost/index.tsx")))
 }
 

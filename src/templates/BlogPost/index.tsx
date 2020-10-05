@@ -1,34 +1,42 @@
-import React from "react"
-import { Link, graphql, PageProps } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import SEO from "../components/seo"
-import Layout from "../layouts"
+import React from "react";
+import { graphql, PageProps } from "gatsby";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+import SEO from "../../components/seo";
+import Layout from "../../layouts";
+import "./index.scss";
+import { Typography } from "@material-ui/core";
+import { Link } from "@material-ui/core";
 
-interface Props extends PageProps{
-  data:{
-    mdx:any;
-    site:any;
+interface Props extends PageProps {
+  data: {
+    mdx: any;
+    site: any;
   };
-  pageContext:{
-    previous:any;
-    next:any;
-  }
+  pageContext: {
+    previous: any;
+    next: any;
+  };
 }
-const BlogPostTemplate =( props:Props)=> {
- 
-    const post = props.data.mdx
-    const siteTitle = props.data.site.siteMetadata.title
-    const { previous, next } = props.pageContext
+const BlogPostTemplate = (props: Props) => {
+  const post = props.data.mdx;
+  const siteTitle = props.data.site.siteMetadata.title;
+  const { previous, next } = props.pageContext;
 
-    return (
-      <Layout>
+  return (
+    <Layout>
+      <div className="blogpost">
         <h1>{post.frontmatter.title}</h1>
-        <p
+
+        <MDXRenderer
+          components={{
+            h1: Typography,
+
+            a: Link,
+          }}
         >
-          
-        </p>
-        <MDXRenderer>{post.body}</MDXRenderer>
-{/*         <ul
+          {post.body}
+        </MDXRenderer>
+        {/*         <ul
           style={{
             display: `flex`,
             flexWrap: `wrap`,
@@ -51,13 +59,14 @@ const BlogPostTemplate =( props:Props)=> {
               </Link>
             )}
           </li>
+          
         </ul> */}
-      </Layout>
-    );
-  
-}
+      </div>
+    </Layout>
+  );
+};
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -77,4 +86,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

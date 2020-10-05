@@ -8,6 +8,6 @@ exports.components = {
   "component---src-pages-cv-tsx": () => import("./../../src/pages/cv.tsx" /* webpackChunkName: "component---src-pages-cv-tsx" */),
   "component---src-pages-index-tsx": () => import("./../../src/pages/index.tsx" /* webpackChunkName: "component---src-pages-index-tsx" */),
   "component---src-pages-projects-tsx": () => import("./../../src/pages/projects.tsx" /* webpackChunkName: "component---src-pages-projects-tsx" */),
-  "component---src-templates-blog-post-tsx": () => import("./../../src/templates/blog-post.tsx" /* webpackChunkName: "component---src-templates-blog-post-tsx" */)
+  "component---src-templates-blog-post-index-tsx": () => import("./../../src/templates/BlogPost/index.tsx" /* webpackChunkName: "component---src-templates-blog-post-index-tsx" */)
 }
 

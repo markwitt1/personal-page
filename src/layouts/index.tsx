@@ -1,8 +1,13 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./index.scss";
 
 import NavBar from "../components/NavBar";
-import { makeStyles, Fab } from "@material-ui/core";
+import {
+  makeStyles,
+  Fab,
+  ThemeProvider,
+  createMuiTheme,
+} from "@material-ui/core";
 import MyDrawer from "../components/MyDrawer";
 import ContactForm from "../components/ContactForm";
 import ChatIcon from "@material-ui/icons/Chat";
@@ -13,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
+    width: "100%",
   },
   root: {
     display: "flex",
@@ -28,14 +34,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Layout: React.FC = ({ children }) => {
+  const [darkMode, setDarkMode] = useState(
+    window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [formOpen, setFormOpen] = useState(false);
   const classes = useStyles();
+
   return (
     <div id="App">
-      <Helmet>
-        <title>Mark Witt</title>
-      </Helmet>
       <NavBar setDrawerOpen={setDrawerOpen} />
       <div className={classes.toolbar} />
       <div className={classes.root}>
