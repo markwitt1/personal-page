@@ -34,10 +34,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Layout: React.FC = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(
-    window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-  );
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [formOpen, setFormOpen] = useState(false);
   const classes = useStyles();
