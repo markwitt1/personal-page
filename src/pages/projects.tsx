@@ -14,11 +14,10 @@ import {
   makeStyles,
 } from "@material-ui/core";
 import ProjectCard from "../components/ProjectCard";
-import ProjectInfo from "../models/IProjectInfo";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import ClearIcon from "@material-ui/icons/Clear";
 import DoneAllIcon from "@material-ui/icons/DoneAll";
-import Layout from "../layouts";
+import Layout from "../layouts/PageLayout";
 
 const technologies = [
   "Flutter",
@@ -63,7 +62,7 @@ const ProjectsPage = () => {
   const classes = useStyles();
   const [techSel, setTechSel] = useState<string[]>(technologies);
 
-  const projects: ProjectInfo[] = [
+  const projects = [
     {
       img: "/5pk.png",
       title: "5. Prüfungskomponente",

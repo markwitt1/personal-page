@@ -18,10 +18,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/home/yolo/Desktop/personal-page/node_modules/gatsby-plugin-mdx/gatsby-ssr'),
-      options: {"plugins":[{"resolve":"/home/yolo/Desktop/personal-page/node_modules/gatsby-remark-images","id":"3626c0e0-58d4-5046-b0e5-cb7731a052f2","name":"gatsby-remark-images","version":"3.3.23","pluginOptions":{"plugins":[]},"nodeAPIs":[],"browserAPIs":["onRouteUpdate"],"ssrAPIs":[]}],"extensions":[".mdx",".md"],"gatsbyRemarkPlugins":[{"resolve":"gatsby-remark-images","options":{"maxWidth":590}}]},
-    },{
-      plugin: require('/home/yolo/Desktop/personal-page/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
-      options: {"plugins":[]},
+      options: {"plugins":[{"resolve":"/home/yolo/Desktop/personal-page/node_modules/gatsby-remark-images","id":"3626c0e0-58d4-5046-b0e5-cb7731a052f2","name":"gatsby-remark-images","version":"3.3.23","pluginOptions":{"plugins":[]},"nodeAPIs":[],"browserAPIs":["onRouteUpdate"],"ssrAPIs":[]}],"extensions":[".mdx",".md"]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

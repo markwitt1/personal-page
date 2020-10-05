@@ -1,10 +1,17 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { MDXProvider } from "@mdx-js/react";
 
-import initialTheme from "./src/theme";
-import { themeReducer, initialState } from "./src/themeReducer";
-import { DispatchContext } from "./src/DispatchContext";
+import initialTheme from "./src/theme/theme";
+import { themeReducer, initialState } from "./src/theme/themeReducer";
+import { DispatchContext } from "./src/theme/DispatchContext";
+import CodeBlock from "./src/templates/BlogPost/CodeBlock";
+
+const components = {
+  code: CodeBlock,
+};
+
 function TopLayout(props) {
   const [state, dispatch] = React.useReducer(themeReducer, initialState);
   const { darkMode } = state;
@@ -22,10 +29,9 @@ function TopLayout(props) {
   return (
     <>
       <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <DispatchContext.Provider value={dispatch}>
-          {props.children}
+          <MDXProvider components={components}>{props.children}</MDXProvider>
         </DispatchContext.Provider>
       </ThemeProvider>
     </>

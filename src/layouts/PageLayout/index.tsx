@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import "./index.scss";
 
-import NavBar from "../components/NavBar";
+import NavBar from "../../components/NavBar";
 import {
   makeStyles,
   Fab,
   ThemeProvider,
   createMuiTheme,
 } from "@material-ui/core";
-import MyDrawer from "../components/MyDrawer";
-import ContactForm from "../components/ContactForm";
+import MyDrawer from "../../components/MyDrawer";
+import ContactForm from "../../components/ContactForm";
 import ChatIcon from "@material-ui/icons/Chat";
 import Helmet from "react-helmet";
 

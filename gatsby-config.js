@@ -46,30 +46,9 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [".mdx", ".md"],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            },
-          },
-        ],
+
         plugins: [`gatsby-remark-images`],
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
-
-    /*     {
-          resolve: `gatsby-plugin-typography`,
-          options: {
-            pathToConfigModule: `src/utils/typography`,
-          },
-        }, */
   ],
 };

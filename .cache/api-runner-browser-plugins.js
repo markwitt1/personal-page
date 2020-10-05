@@ -9,12 +9,9 @@ module.exports = [{
       options: {"plugins":[]},
     },{
       plugin: require('../node_modules/gatsby-plugin-mdx/gatsby-browser.js'),
-      options: {"plugins":[{"resolve":"/home/yolo/Desktop/personal-page/node_modules/gatsby-remark-images","id":"3626c0e0-58d4-5046-b0e5-cb7731a052f2","name":"gatsby-remark-images","version":"3.3.23","pluginOptions":{"plugins":[]},"nodeAPIs":[],"browserAPIs":["onRouteUpdate"],"ssrAPIs":[]}],"extensions":[".mdx",".md"],"gatsbyRemarkPlugins":[{"resolve":"gatsby-remark-images","options":{"maxWidth":590}}]},
+      options: {"plugins":[{"resolve":"/home/yolo/Desktop/personal-page/node_modules/gatsby-remark-images","id":"3626c0e0-58d4-5046-b0e5-cb7731a052f2","name":"gatsby-remark-images","version":"3.3.23","pluginOptions":{"plugins":[]},"nodeAPIs":[],"browserAPIs":["onRouteUpdate"],"ssrAPIs":[]}],"extensions":[".mdx",".md"]},
     },{
       plugin: require('../node_modules/gatsby-remark-images/gatsby-browser.js'),
-      options: {"plugins":[]},
-    },{
-      plugin: require('../node_modules/gatsby-plugin-google-analytics/gatsby-browser.js'),
       options: {"plugins":[]},
     },{
       plugin: require('../gatsby-browser.js'),

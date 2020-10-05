@@ -1,7 +1,7 @@
 import React from "react";
 import IconButton from "@material-ui/core/IconButton";
 import useTheme from "@material-ui/core/styles/useTheme";
-import { useToggleDarkMode } from "../DispatchContext";
+import { useToggleDarkMode } from "../theme/DispatchContext";
 import { Brightness4, Brightness7 } from "@material-ui/icons";
 
 function DarkModeButton(props) {
