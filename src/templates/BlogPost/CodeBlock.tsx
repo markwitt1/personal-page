@@ -4,7 +4,6 @@ import duotoneLight from "prism-react-renderer/themes/duotoneLight";
 import duotoneDark from "prism-react-renderer/themes/duotoneDark";
 
 export default ({ children, className }) => {
-  console.log(children);
   const language = className?.replace(/language-/, "");
   return (
     <Highlight
