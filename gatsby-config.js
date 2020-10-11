@@ -11,6 +11,7 @@ module.exports = {
     social: {
       twitter: `markwitt_me`,
     },
+    language: "en",
   },
   plugins: [
     {
@@ -21,6 +22,14 @@ module.exports = {
         start_url: `/`,
         background_color: `white`,
         theme_color: `#3f51b5`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /static/,
+        },
       },
     },
     `gatsby-plugin-styled-components`,
