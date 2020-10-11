@@ -1,6 +1,6 @@
 node_modules
-.cache
-public
+.cache/
+public/
 .env
 
 #amplify
@@ -19,3 +19,4 @@ amplify-build-config.json
 amplify-gradle-config.json
 amplifytools.xcconfig
 
+.cache/async-requires.js
