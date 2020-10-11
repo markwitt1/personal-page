@@ -1,10 +1,13 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Mark Witt Homepage + Blog`,
+    title: `About`,
+    description: `I am a Software Engineer from Berlin`,
+    image:
+      "https://lh3.googleusercontent.com/proxy/4sGzM-jG8wGPtl-lBzbbmsRbERFd0aJi-XTEzl3IXARfyWFidjGabJFH8BxFbyCx6cAwYhZ0ay-1ZK3vSSgylER4",
+    titleTemplate: `Mark Witt: %s`,
     author: `Mark Witt`,
-    description: `Welcome :)`,
-    siteUrl: `https://markwitt.me/`,
+    url: `https://markwitt.me/`,
     social: {
       twitter: `markwitt_me`,
     },

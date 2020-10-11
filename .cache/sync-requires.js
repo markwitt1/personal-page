@@ -5,7 +5,7 @@ const preferDefault = m => m && m.default || m
 
 
 exports.components = {
-  "component---node-modules-gatsby-plugin-offline-app-shell-js": hot(preferDefault(require("/home/yolo/Desktop/personal-page/node_modules/gatsby-plugin-offline/app-shell.js"))),
+  "component---cache-dev-404-page-js": hot(preferDefault(require("/home/yolo/Desktop/personal-page/.cache/dev-404-page.js"))),
   "component---src-pages-404-tsx": hot(preferDefault(require("/home/yolo/Desktop/personal-page/src/pages/404.tsx"))),
   "component---src-pages-blog-tsx": hot(preferDefault(require("/home/yolo/Desktop/personal-page/src/pages/blog.tsx"))),
   "component---src-pages-cv-tsx": hot(preferDefault(require("/home/yolo/Desktop/personal-page/src/pages/cv.tsx"))),

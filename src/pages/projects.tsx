@@ -18,6 +18,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import ClearIcon from "@material-ui/icons/Clear";
 import DoneAllIcon from "@material-ui/icons/DoneAll";
 import Layout from "../layouts/PageLayout";
+import SEO from "../components/SEO";
 
 const technologies = [
   "Flutter",
@@ -116,6 +117,7 @@ const ProjectsPage = () => {
   };
   return (
     <Layout>
+      <SEO title="Projects" />
       <div className={classes.controls}>
         <FormControl className={classes.formControl}>
           <InputLabel id="chip-label">Technologies:</InputLabel>

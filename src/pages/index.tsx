@@ -1,12 +1,14 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
 import Layout from "../layouts/PageLayout";
+import SEO from "../components/SEO";
 
 interface Props {}
 
 const AboutPage = () => {
   return (
     <Layout>
+      <SEO title="About" />
       <Typography variant="h4">About me</Typography>
       <Typography>
         I am a Software Engineer who is very passionate about modern
