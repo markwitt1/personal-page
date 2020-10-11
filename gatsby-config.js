@@ -7,7 +7,7 @@ module.exports = {
       "https://lh3.googleusercontent.com/proxy/4sGzM-jG8wGPtl-lBzbbmsRbERFd0aJi-XTEzl3IXARfyWFidjGabJFH8BxFbyCx6cAwYhZ0ay-1ZK3vSSgylER4",
     titleTemplate: `Mark Witt: %s`,
     author: `Mark Witt`,
-    url: `https://markwitt.me/`,
+    siteUrl: `https://markwitt.me/`,
     social: {
       twitter: `markwitt_me`,
     },

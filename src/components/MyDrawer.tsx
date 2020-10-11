@@ -14,6 +14,7 @@ import PersonIcon from "@material-ui/icons/Person";
 import SchoolIcon from "@material-ui/icons/School";
 import WorkIcon from "@material-ui/icons/Work";
 import ChatIcon from "@material-ui/icons/Chat";
+import TwitterIcon from "@material-ui/icons/Twitter";
 import { Link as MuiLink } from "@material-ui/core";
 import Link from "gatsby-link";
 
@@ -43,7 +44,7 @@ const MyDrawer = ({ drawerOpen, setDrawerOpen }: Props) => {
   };
 
   const drawerContent = (
-    <React.Fragment>
+    <>
       <ListItem className={classes.toolbar}>
         <ListItemText primary="Navigation" />
       </ListItem>
@@ -75,7 +76,8 @@ const MyDrawer = ({ drawerOpen, setDrawerOpen }: Props) => {
           onClick={closeDrawer}
         />
       </List>
-    </React.Fragment>
+      <TwitterIcon />
+    </>
   );
   return (
     <nav className={classes.nav}>
