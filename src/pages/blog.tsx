@@ -1,21 +1,63 @@
 import React from "react";
-import { Link, graphql, PageProps } from "gatsby";
-import { Typography } from "@material-ui/core";
+import { graphql, PageProps } from "gatsby";
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  makeStyles,
+  Typography,
+} from "@material-ui/core";
 import Layout from "../layouts/PageLayout";
 import SEO from "../components/SEO";
+import Link from "../components/Link";
 interface DataType {
   allMdx: any;
 }
+
+const useStyles = makeStyles({
+  buttonLink: {
+    textDecoration: "none",
+  },
+});
+
 const Blog = (props: PageProps<DataType>) => {
   console.log(props);
   const posts = props.data.allMdx.edges;
+  const s = useStyles();
+
   return (
-    <>
+    <Layout>
       <SEO title="Blog" />
-      <Layout>
-        <div>
-          {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug;
+      {posts.map(
+        ({ node }) =>
+          node.frontmatter.published && (
+            <Card>
+              <CardContent>
+                <Typography color="textSecondary" gutterBottom>
+                  {node.frontmatter.date}
+                </Typography>
+                <Typography variant="h5" component="h2">
+                  {node.frontmatter.title}
+                </Typography>
+                <Typography color="textSecondary"></Typography>
+                <Typography variant="body2">
+                  {node.frontmatter.description}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button
+                  className={s.buttonLink}
+                  to={`/blog${node.fields.slug}`}
+                  component={Link}
+                  underline="none"
+                >
+                  Read
+                </Button>
+              </CardActions>
+            </Card>
+          )
+        /*             const title = node.frontmatter.title || node.fields.slug;
             return (
               <div key={node.fields.slug}>
                 <Typography variant="h3">
@@ -28,11 +70,9 @@ const Blog = (props: PageProps<DataType>) => {
                 </Typography>
                 <small></small>
               </div>
-            );
-          })}
-        </div>
-      </Layout>
-    </>
+            ); */
+      )}
+    </Layout>
   );
 };
 
@@ -54,6 +94,9 @@ export const pageQuery = graphql`
           frontmatter {
             title
             description
+            date
+            published
+            devtolink
           }
         }
       }

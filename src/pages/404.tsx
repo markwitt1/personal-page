@@ -6,10 +6,10 @@ interface Props {}
 
 const CVPage = () => {
   return (
-    <>
+    <Layout>
       <SEO title="404" />
-      <Layout>Page not found :(</Layout>
-    </>
+      Page not found :(
+    </Layout>
   );
 };
 

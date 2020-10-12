@@ -1,16 +1,31 @@
 import React from "react";
 import Highlight, { defaultProps } from "prism-react-renderer";
-import duotoneLight from "prism-react-renderer/themes/duotoneLight";
-import duotoneDark from "prism-react-renderer/themes/duotoneDark";
+import { makeStyles } from "@material-ui/core";
+import vsDark from "prism-react-renderer/themes/vsDark";
+
+const useStyles = makeStyles((theme) => ({
+  code: {
+    "& pre code": {
+      fontSize: ".9em",
+    },
+    "& .token.operator": {
+      background: "transparent",
+    },
+    "& .token.keyword": {
+      color: "#a6e22e",
+    },
+  },
+}));
 
 export default ({ children, className }) => {
   const language = className?.replace(/language-/, "");
+  const s = useStyles();
   return (
     <Highlight
-      theme={duotoneDark}
       code={children}
       language={language}
       {...defaultProps}
+      theme={vsDark}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={className} style={{ ...style, padding: "20px" }}>

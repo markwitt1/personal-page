@@ -39,7 +39,16 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-feed-mdx`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+          },
+        ],
+      },
+    },
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-sass`,
     {
@@ -69,6 +78,7 @@ module.exports = {
       options: {
         // The property ID; the tracking code won't be generated without it
         trackingId: "UA-180323687-1",
+        respectDNT: true,
       },
     },
   ],

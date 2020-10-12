@@ -1,10 +1,10 @@
 import React from "react";
 import { graphql, PageProps } from "gatsby";
-import { MDXProvider } from "@mdx-js/react";
 import Layout from "../../layouts/PageLayout";
 import "./index.scss";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import CodeBlock from "./CodeBlock";
+import { Paper } from "@material-ui/core";
 
 interface Props extends PageProps {
   data: {
