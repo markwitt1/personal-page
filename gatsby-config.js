@@ -14,6 +14,7 @@ module.exports = {
     language: "en",
   },
   plugins: [
+    "gatsby-plugin-webpack-bundle-analyser-v2",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -22,6 +23,7 @@ module.exports = {
         start_url: `/`,
         background_color: `white`,
         theme_color: `#3f51b5`,
+        icon: "./static/logo512.png",
       },
     },
     {
@@ -60,6 +62,13 @@ module.exports = {
         extensions: [".mdx", ".md"],
 
         plugins: [`gatsby-remark-images`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-180323687-1",
       },
     },
   ],

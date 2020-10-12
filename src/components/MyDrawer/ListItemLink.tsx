@@ -1,14 +1,16 @@
-import React, { Component } from "react";
+import React, { Component, HTMLProps } from "react";
 import {
   IconProps,
   Link as MuiLink,
+  LinkTypeMap,
   ListItemIcon,
   ListItemText,
   SvgIconTypeMap,
 } from "@material-ui/core";
-import Link from "gatsby-link";
 import { ListItem, makeStyles } from "@material-ui/core";
 import { OverridableComponent } from "@material-ui/core/OverridableComponent";
+import Link from "gatsby-link";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 interface ListItemLinkProps {
   Icon?: OverridableComponent<SvgIconTypeMap<{}, "svg">>;
@@ -32,15 +34,15 @@ const ListItemLink: React.FC<ListItemLinkProps> = ({
     },
   }));
   const s = useStyles();
-  const props = external
-    ? { href: to, target: "_blank" }
+  const linkProps = external
+    ? { href: to, target: "_blank", rel: "noreferrer", component: OutboundLink }
     : {
         to,
         component: Link,
       };
   return (
     <>
-      <MuiLink className={s.link} {...props}>
+      <MuiLink className={s.link} {...linkProps}>
         <ListItem button onClick={onClick}>
           {Icon ? (
             <ListItemIcon>

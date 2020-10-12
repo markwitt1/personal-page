@@ -19,7 +19,7 @@
     "gatsby-image": "^2.0.39",
     "gatsby-link": "^2.4.13",
     "gatsby-plugin-feed-mdx": "^1.0.0",
-    "gatsby-plugin-google-analytics": "^2.0.18",
+    "gatsby-plugin-google-analytics": "^2.3.18",
     "gatsby-plugin-html-attributes": "^1.0.5",
     "gatsby-plugin-manifest": "^2.4.21",
     "gatsby-plugin-material-ui": "^2.1.10",
@@ -67,7 +67,6 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
-    "prettier": "^1.17.0",
     "@types/jest": "^24.9.1",
     "@types/node": "^12.12.36",
     "@types/react": "^16.9.34",
@@ -76,7 +75,9 @@
     "@types/react-helmet": "^6.0.0",
     "@types/react-router-dom": "^5.1.5",
     "@types/socket.io-client": "^1.4.32",
-    "@types/webfontloader": "^1.6.30"
+    "@types/webfontloader": "^1.6.30",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.13",
+    "prettier": "^1.17.0"
   },
   "scripts": {
     "build": "gatsby build",

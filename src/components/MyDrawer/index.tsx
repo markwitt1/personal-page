@@ -19,9 +19,6 @@ import ChatIcon from "@material-ui/icons/Chat";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import DevBadge from "../../../static/dev-badge.svg";
-
-import { Link as MuiLink } from "@material-ui/core";
-import Link from "gatsby-link";
 import ListItemLink from "./ListItemLink";
 
 interface Props {
