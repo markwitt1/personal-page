@@ -9,7 +9,7 @@ import {
 } from "@material-ui/core";
 import { ListItem, makeStyles } from "@material-ui/core";
 import { OverridableComponent } from "@material-ui/core/OverridableComponent";
-import Link from "gatsby-link";
+import Link from "../Link";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 interface ListItemLinkProps {
@@ -17,7 +17,6 @@ interface ListItemLinkProps {
   primary: string;
   to: string;
   onClick: () => void;
-  external?: boolean;
 }
 
 const ListItemLink: React.FC<ListItemLinkProps> = ({
@@ -25,7 +24,6 @@ const ListItemLink: React.FC<ListItemLinkProps> = ({
   primary,
   to,
   onClick,
-  external,
 }) => {
   const useStyles = makeStyles((theme) => ({
     link: {
@@ -34,26 +32,19 @@ const ListItemLink: React.FC<ListItemLinkProps> = ({
     },
   }));
   const s = useStyles();
-  const linkProps = external
-    ? { href: to, target: "_blank", rel: "noreferrer", component: OutboundLink }
-    : {
-        to,
-        component: Link,
-      };
-  return (
-    <>
-      <MuiLink className={s.link} {...linkProps}>
-        <ListItem button onClick={onClick}>
-          {Icon ? (
-            <ListItemIcon>
-              <Icon />
-            </ListItemIcon>
-          ) : null}
 
-          <ListItemText primary={primary} />
-        </ListItem>
-      </MuiLink>
-    </>
+  return (
+    <Link className={s.link} to={to}>
+      <ListItem button onClick={onClick}>
+        {Icon ? (
+          <ListItemIcon>
+            <Icon />
+          </ListItemIcon>
+        ) : null}
+
+        <ListItemText primary={primary} />
+      </ListItem>
+    </Link>
   );
 };
 

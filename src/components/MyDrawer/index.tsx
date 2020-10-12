@@ -95,21 +95,18 @@ const MyDrawer = ({ drawerOpen, setDrawerOpen }: Props) => {
         <Divider />
 
         <ListItemLink
-          external
           Icon={TwitterIcon}
           primary="Twitter"
           to="https://twitter.com/markwitt_me"
           onClick={closeDrawer}
         />
         <ListItemLink
-          external
           Icon={LinkedInIcon}
           primary="LinkedIn"
           to="https://www.linkedin.com/in/mark-witt-9aa157196"
           onClick={closeDrawer}
         />
         <ListItemLink
-          external
           Icon={DevIcon}
           primary="DEV.to"
           to="https://dev.to/markwitt_me"

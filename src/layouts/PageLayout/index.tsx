@@ -11,8 +11,6 @@ import {
 import MyDrawer from "../../components/MyDrawer";
 import ContactForm from "../../components/ContactForm";
 import ChatIcon from "@material-ui/icons/Chat";
-import Helmet from "react-helmet";
-import SEO from "../../components/SEO";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,

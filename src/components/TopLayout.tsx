@@ -1,13 +1,17 @@
-import React from "react";
+import React, { FC, HTMLProps } from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { MDXProvider } from "@mdx-js/react";
-
 import initialTheme from "../theme/theme";
 import { themeReducer, initialState } from "../theme/themeReducer";
 import { DispatchContext } from "../theme/DispatchContext";
 import CodeBlock from "../templates/BlogPost/CodeBlock";
 import { Link } from "@material-ui/core";
+import {
+  OutboundLink,
+  OutboundLinkProps,
+} from "gatsby-plugin-google-analytics";
+import { Link as GatsbyLink } from "gatsby";
 
 const components = {
   code: CodeBlock,
