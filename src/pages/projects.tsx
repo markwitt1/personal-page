@@ -128,6 +128,10 @@ const ProjectsPage = () => {
             value={techSel}
             onChange={handleChange}
             input={<Input id="select-multiple-chip" />}
+            MenuProps={{
+              transformOrigin: { vertical: "top", horizontal: "left" },
+              getContentAnchorEl: null,
+            }}
             renderValue={(selected) => (
               <div className={classes.chips}>
                 {(selected as string[]).map((value) => (

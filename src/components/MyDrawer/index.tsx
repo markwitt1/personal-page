@@ -96,19 +96,19 @@ const MyDrawer = ({ drawerOpen, setDrawerOpen }: Props) => {
 
         <ListItemLink
           Icon={TwitterIcon}
-          primary="Twitter"
+          primary="/markwitt_me"
           to="https://twitter.com/markwitt_me"
           onClick={closeDrawer}
         />
         <ListItemLink
           Icon={LinkedInIcon}
-          primary="LinkedIn"
-          to="https://www.linkedin.com/in/mark-witt-9aa157196"
+          primary="/mark-witt"
+          to="https://www.linkedin.com/in/mark-witt"
           onClick={closeDrawer}
         />
         <ListItemLink
           Icon={DevIcon}
-          primary="DEV.to"
+          primary="/markwitt_me"
           to="https://dev.to/markwitt_me"
           onClick={closeDrawer}
         />
