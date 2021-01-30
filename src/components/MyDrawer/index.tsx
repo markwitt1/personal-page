@@ -18,6 +18,7 @@ import WorkIcon from "@material-ui/icons/Work";
 import ChatIcon from "@material-ui/icons/Chat";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
 import DevBadge from "../../../static/dev-badge.svg";
 import ListItemLink from "./ListItemLink";
 
@@ -110,6 +111,12 @@ const MyDrawer = ({ drawerOpen, setDrawerOpen }: Props) => {
           Icon={DevIcon}
           primary="/markwitt_me"
           to="https://dev.to/markwitt_me"
+          onClick={closeDrawer}
+        />
+        <ListItemLink
+          Icon={GitHubIcon}
+          primary="/teknoalex"
+          to="https://github.com/teknoalex"
           onClick={closeDrawer}
         />
       </List>

@@ -12,7 +12,13 @@ const AboutPage = () => {
       <Typography variant="h4">About me</Typography>
       <Typography>
         I am a Software Engineer who is very passionate about modern
-        technologies. I am a very fast and practical learner.
+        technologies. The exponential growth of technological advances will
+        offer us a lot of opportunities in the future and I want to be a part of
+        that.
+      </Typography>
+      <Typography>
+        I have a professional experience building modern web applications using
+        React and TypeScript + Amazon Web Services
       </Typography>
     </Layout>
   );
