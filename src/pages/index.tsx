@@ -17,7 +17,7 @@ const AboutPage = () => {
         that.
       </Typography>
       <Typography>
-        I have a professional experience building modern web applications using
+        I have professional experience building modern web applications using
         React and TypeScript + Amazon Web Services
       </Typography>
     </Layout>
