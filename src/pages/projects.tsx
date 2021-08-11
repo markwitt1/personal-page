@@ -15,6 +15,7 @@ import {
 } from "@material-ui/core";
 import ProjectCard from "../components/ProjectCard";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import ShopIcon from "@material-ui/icons/Shop";
 import ClearIcon from "@material-ui/icons/Clear";
 import DoneAllIcon from "@material-ui/icons/DoneAll";
 import Layout from "../layouts/PageLayout";
@@ -64,6 +65,27 @@ const ProjectsPage = () => {
   const [techSel, setTechSel] = useState<string[]>(technologies);
 
   const projects = [
+    ,
+    {
+      img: "/marker.png",
+      title: "MYPE",
+      text:
+        "A mobile app where you can share locations inside of private groups",
+      buttons: [
+        <IconButton
+          onClick={() => {
+            window.open(
+              "https://play.google.com/store/apps/details?id=me.markwitt.mype_app"
+            );
+          }}
+        >
+          <ShopIcon />
+        </IconButton>,
+      ],
+      technologies: ["Flutter"],
+      link:
+        "https://play.google.com/store/apps/details?id=me.markwitt.mype_app",
+    },
     {
       img: "/5pk.png",
       title: "5. Prüfungskomponente",
@@ -71,8 +93,6 @@ const ProjectsPage = () => {
         "(German language) Wie viel Verantwortung dürfen wir künstlicher Intelligenz überlassen?",
       buttons: [
         <IconButton
-          key="download"
-          aria-label="download"
           onClick={() => {
             window.open(
               "https://drive.google.com/file/d/1SlAIPoN7wJsKWYBNphWyPpi0aF5V9EgE/view?usp=sharing"
